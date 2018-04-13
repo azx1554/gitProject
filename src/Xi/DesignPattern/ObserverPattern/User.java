@@ -3,6 +3,7 @@ package Xi.DesignPattern.ObserverPattern;
 /**
  * Created by Xi on 2018/4/8.
  */
+//观察者
 public class User implements Observer {
 
     private String name;

@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Created by Xi on 2018/4/8.
  */
+//被观察者
 public class WechatServer implements Observerable {
 
     private List<Observer> observers = new ArrayList<>();

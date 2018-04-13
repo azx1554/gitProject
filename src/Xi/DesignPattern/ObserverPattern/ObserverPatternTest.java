@@ -1,5 +1,8 @@
 package Xi.DesignPattern.ObserverPattern;
 
+import java.util.Arrays;
+import java.util.function.Consumer;
+
 /**
  * Created by Xi on 2018/4/8.
  */
