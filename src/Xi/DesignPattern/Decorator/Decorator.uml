@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-106.66666666666663" y="-112.5">Xi.DesignPattern.Decorator.Window</node>
+    <node x="8.333333333333371" y="-112.5">Xi.DesignPattern.Decorator.TextBox</node>
+    <node x="-332.66666666666663" y="-124.0">Xi.DesignPattern.Decorator.ComponentDecorator</node>
+    <node x="-176.0" y="-204.0">Xi.DesignPattern.Decorator.Component</node>
+    <node x="-413.0" y="-21.0">Xi.DesignPattern.Decorator.BlackBorderDecorator</node>
+    <node x="-214.0" y="-21.0">Xi.DesignPattern.Decorator.ScrollBarDecorator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Xi.DesignPattern.Decorator.BlackBorderDecorator" target="Xi.DesignPattern.Decorator.ComponentDecorator">
+      <point x="0.0" y="-15.0" />
+      <point x="-323.5" y="-46.0" />
+      <point x="-281.16666666666663" y="-46.0" />
+      <point x="-51.5" y="26.5" />
+    </edge>
+    <edge source="Xi.DesignPattern.Decorator.ScrollBarDecorator" target="Xi.DesignPattern.Decorator.ComponentDecorator">
+      <point x="0.0" y="-15.0" />
+      <point x="-134.5" y="-46.0" />
+      <point x="-178.16666666666666" y="-46.0" />
+      <point x="51.5" y="26.5" />
+    </edge>
+    <edge source="Xi.DesignPattern.Decorator.Window" target="Xi.DesignPattern.Decorator.Component">
+      <point x="0.0" y="-15.0" />
+      <point x="-59.16666666666663" y="-144.0" />
+      <point x="-103.5" y="-144.0" />
+      <point x="14.5" y="15.0" />
+    </edge>
+    <edge source="Xi.DesignPattern.Decorator.ComponentDecorator" target="Xi.DesignPattern.Decorator.Component">
+      <point x="51.5" y="-26.5" />
+      <point x="-178.16666666666666" y="-144.0" />
+      <point x="-132.5" y="-144.0" />
+      <point x="-14.5" y="15.0" />
+    </edge>
+    <edge source="Xi.DesignPattern.Decorator.TextBox" target="Xi.DesignPattern.Decorator.Component">
+      <point x="0.0" y="-15.0" />
+      <point x="55.33333333333337" y="-154.0" />
+      <point x="-74.5" y="-154.0" />
+      <point x="43.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.5" y="0.0" />
+  <SelectedNodes>
+    <node>Xi.DesignPattern.Decorator.Window</node>
+    <node>Xi.DesignPattern.Decorator.TextBox</node>
+    <node>Xi.DesignPattern.Decorator.ComponentDecorator</node>
+    <node>Xi.DesignPattern.Decorator.Component</node>
+    <node>Xi.DesignPattern.Decorator.BlackBorderDecorator</node>
+    <node>Xi.DesignPattern.Decorator.ScrollBarDecorator</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

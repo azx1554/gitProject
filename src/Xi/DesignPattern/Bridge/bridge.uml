@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="285.0" y="111.5">Xi.DesignPattern.Bridge.WindowsOS</node>
+    <node x="-51.0" y="123.0">Xi.DesignPattern.Bridge.JPGImage</node>
+    <node x="-175.0" y="123.0">Xi.DesignPattern.Bridge.GIFImage</node>
+    <node x="160.0" y="20.0">Xi.DesignPattern.Bridge.OSInterface</node>
+    <node x="171.0" y="111.5">Xi.DesignPattern.Bridge.LinuxOS</node>
+    <node x="-163.0" y="20.0">Xi.DesignPattern.Bridge.Image</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Xi.DesignPattern.Bridge.LinuxOS" target="Xi.DesignPattern.Bridge.OSInterface">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Xi.DesignPattern.Bridge.WindowsOS" target="Xi.DesignPattern.Bridge.OSInterface">
+      <point x="0.0" y="-15.0" />
+      <point x="344.0" y="75.0" />
+      <point x="256.66666666666663" y="75.0" />
+      <point x="38.66666666666663" y="15.0" />
+    </edge>
+    <edge source="Xi.DesignPattern.Bridge.JPGImage" target="Xi.DesignPattern.Bridge.Image">
+      <point x="0.0" y="-15.0" />
+      <point x="2.0" y="98.0" />
+      <point x="-9.25" y="98.0" />
+      <point x="51.25" y="26.5" />
+    </edge>
+    <edge source="Xi.DesignPattern.Bridge.GIFImage" target="Xi.DesignPattern.Bridge.Image">
+      <point x="0.0" y="-15.0" />
+      <point x="-123.0" y="98.0" />
+      <point x="-111.75" y="98.0" />
+      <point x="-51.25" y="26.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="235.0" y="107.0" />
+  <SelectedNodes>
+    <node>Xi.DesignPattern.Bridge.WindowsOS</node>
+    <node>Xi.DesignPattern.Bridge.OSInterface</node>
+    <node>Xi.DesignPattern.Bridge.LinuxOS</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
