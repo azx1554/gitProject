@@ -1,15 +1,16 @@
 package Xi.DesignPattern.FlyweightPattern;
 
-public class Compound {
-    Element element;
-    String name;
-    int a, b;
+import java.util.HashMap;
 
-    public Compound(Element element, String name, int a, int b) {
-        this.element = element;
-        this.name = name;
-        this.a = a;
-        this.b = b;
+public class Compound {
+    private HashMap<Element, Integer> elementMap;
+    private String name;
+
+    Compound(HashMap elementMap, String name) {
+        this.elementMap = elementMap;
     }
 
+    public void display() {
+
+    }
 }

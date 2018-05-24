@@ -1,49 +1,40 @@
 package Xi.DesignPattern.FlyweightPattern;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 //享元工厂与具体享元
 public class ElementFactory {
-	private HashMap<String, Element> hashmap;
-	static ElementFactory Factory=new ElementFactory();
-	private ElementFactory(){
-		hashmap=new HashMap<String, Element>();
-	}
-	
-	public static ElementFactory getfactory(){
-		return Factory;
-	}
-	
-	public synchronized Element getelement(String key){
-		if(hashmap.containsKey(key))
-			return hashmap.get(key);
-		else{
-			char elementOne='\0',elementTwo='\0';
-			elementOne=key.charAt(0);
-			elementTwo=key.charAt(1);
-			Element element=new TwoElement(elementOne,elementTwo);
-			hashmap.put(key, element);
-			return element;
-		}
-	}
-	
-	public class TwoElement implements Element{
-		private char elementOne,elementTwo;
+    private HashMap<String, Element> hashmap;
+    static ElementFactory Factory = new ElementFactory();
 
-		//因为构造函数为私有，所以定义为内部类
-		private TwoElement(char elementOne,char elementTwo) {
-			this.elementOne=elementOne;
-			this.elementTwo=elementTwo;
-			
-		}
+    private ElementFactory() {
+        hashmap = new HashMap<>();
+    }
 
-		
-		public void printMess(String name, int elementOneNumber,int elementTwoNumber) {
-			System.out.print(name+"由"+elementOne+"和"+elementTwo+"组成");
-			System.out.println("含有"+elementOneNumber+"个"+elementOne+"元素"+"和"+elementTwoNumber+"个"+elementTwo+"元素");
-			
-		}
+    public static ElementFactory getfactory() {
+        return Factory;
+    }
 
-	}
-
+    public synchronized Element getelement(String key) {
+        if (hashmap.containsKey(key))
+            return hashmap.get(key);
+        else {
+            if (key.length() > 1) {
+                List<Element> elements = new ArrayList<>();
+                for (int i = 0; i < key.length(); i++) {
+                    String tempKey = String.valueOf(key.charAt(i));
+                    elements.add(getelement(tempKey));
+                }
+                Element element = new CompositeElement(key, elements);
+                hashmap.put(key, element);
+                return element;
+            } else {
+                Element element = new ConcreteElement(key);
+                hashmap.put(key, element);
+                return element;
+            }
+        }
+    }
 }
