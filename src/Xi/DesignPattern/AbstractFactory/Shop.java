@@ -10,7 +10,6 @@ public class Shop {
         showMess();
     }
 
-    ;
 
     private void showMess() {
         System.out.println("<��װ��Ϣ>");

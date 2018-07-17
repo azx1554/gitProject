@@ -19,7 +19,9 @@ public class XMLUtil {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
             Document doc;
-            doc = builder.parse(new File("src/Xi/DesignPattern/StrategyPattern/config.xml"));
+
+            String path = XMLUtil.class.getResource("").getPath() + "config.xml";
+            doc = builder.parse(new File(path));
 
             //获取包含类名的文本节点
             NodeList nl = doc.getElementsByTagName("className");

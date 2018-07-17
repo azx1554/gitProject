@@ -1,5 +1,7 @@
 package Xi.DesignPattern.StrategyPattern;
 
+import java.io.File;
+
 /**
  * Created by Xi on 2018/5/24.
  */

@@ -41,5 +41,10 @@ public class BuilderPatternTest {
         System.out.println("面容：" + devil.getFace());
         System.out.println("服装：" + devil.getCostume());
         System.out.println("发型：" + devil.getHairstyle());
+
+
+        NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
+                .calories(100).sodium(35).carbohydrate(27).build();
+        System.out.println(cocaCola);
     }
 }

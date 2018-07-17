@@ -16,30 +16,30 @@ public class Main {
     private final static Lock lock = new ReentrantLock();
 
     public static void main(String[] args) {
-        Thread A = new Thread( () -> {
-           while (state <= 15) {
-               lock.lock();
-               if (state % 3 == 0) {
-                   System.out.print("A");
-                   state++;
-               }
-               lock.unlock();
-           }
-        });
-        Thread B= new Thread( () -> {
-            while (state <= 15) {
+        Thread A = new Thread(() -> {
+            while (state < 15) {
                 lock.lock();
-                if (state % 3 == 1) {
+                if (state % 3 == 0 && state < 15) {
+                    System.out.print("A");
+                    state++;
+                }
+                lock.unlock();
+            }
+        });
+        Thread B = new Thread(() -> {
+            while (state < 15) {
+                lock.lock();
+                if (state % 3 == 1 && state < 15) {
                     System.out.print("B");
                     state++;
                 }
                 lock.unlock();
             }
         });
-        Thread C = new Thread( () -> {
-            while (state <= 15) {
+        Thread C = new Thread(() -> {
+            while (state < 15) {
                 lock.lock();
-                if (state % 3 == 2) {
+                if (state % 3 == 2 && state < 15) {
                     System.out.print("C");
                     state++;
                 }
