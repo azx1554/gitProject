@@ -12,6 +12,6 @@ public class ConcreteColleague extends Colleague {
     //实现自身方法
     @Override
     public void method1() {
-
+        System.out.println("调用自身方法");
     }
 }

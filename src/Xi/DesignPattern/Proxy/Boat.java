@@ -13,4 +13,9 @@ public class Boat implements Moveable{
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void showType() {
+        System.out.println("我是轮船");
+    }
 }
