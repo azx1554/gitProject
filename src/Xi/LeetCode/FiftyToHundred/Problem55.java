@@ -51,6 +51,19 @@ public class Problem55 {
         return false;
     }
 
+    //这里观察到假如有两个位置都能到达数组最后，前面的位置也可以到达后面的位置，利用这个性质可使用贪心算法
+    public boolean greedyWay(int[] nums) {
+        int accessToLast = nums.length - 1; //记录能到达数组最后的下标
+
+        for (int i = nums.length - 2; i >= 0; i--) {
+            if (nums[i] + i >= accessToLast) {
+                accessToLast = i;
+            }
+        }
+
+        return accessToLast == 0;
+    }
+
     public static void main(String[] args) {
         int[] nums = {2,5,0,0};
         recursive(nums, 0);
