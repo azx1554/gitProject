@@ -9,36 +9,30 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 3,2,1 → 1,2,3
 1,1,5 → 1,5,1
  */
-public class Problem31 {
+public class  Problem31 {
     public static void nextPermutation(int[] nums) {
-        if (nums.length < 2) {
+        if (nums.length < 2)
             return;
-        }
-        int i;
-        for (i = nums.length - 2; i >= 0; i--) {
-            if (nums[i] >= nums[i+1]) {
-                continue;
-            } else {
-                i++;
+        int index = nums.length - 1, j = nums.length - 1;
+        while (index > 0) {
+            if (nums[index - 1] < nums[index])
                 break;
-            }
-        }
-        i--;
-        if (i < 0) {
-            reverse(nums, 0, nums.length-1);
-        } else {
-            int j;
-            for (j = nums.length - 1; j >= 0; j--) {
-                if (nums[j] <= nums[i]) {
-                    continue;
-                } else {
-                    break;
-                }
-            }
-            swap(nums, i, j);
-            reverse(nums, i+1, nums.length-1);
+            index--;
         }
 
+        if (index == 0) {
+            reverse(nums, 0, nums.length - 1);
+            return;
+        }
+
+        while (j > index -1) {
+            if (nums[j] > nums[index-1]) {
+                swap(nums, index-1, j);
+                break;
+            }
+            j--;
+        }
+        reverse(nums, index, nums.length - 1);
     }
 
     public static void reverse(int[] nums, int left, int right) {
@@ -55,10 +49,8 @@ public class Problem31 {
         nums[left] = nums[left] - nums[right];
     }
 
-
-
     public static void main(String[] args) {
-        int nums[] = {3,2,1};
+        int nums[] = {1,3,2,1};
         nextPermutation(nums);
         for (int i : nums)
             System.out.println(i);

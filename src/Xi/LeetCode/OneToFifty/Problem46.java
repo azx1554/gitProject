@@ -7,11 +7,11 @@ public class Problem46 {
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> tempList = new ArrayList<>();
-        backTrace(nums, result, tempList, 0);
+        backTrace(nums, result, tempList);
         return result;
     }
 
-    public static void backTrace(int[] nums, List<List<Integer>> result, List<Integer> tempList, int index) {
+    public static void backTrace(int[] nums, List<List<Integer>> result, List<Integer> tempList) {
         if (tempList.size() == nums.length) {
             result.add(new ArrayList<>(tempList));
         }
@@ -21,7 +21,7 @@ public class Problem46 {
                 continue;
             }
             tempList.add(nums[i]);
-            backTrace(nums, result, tempList, index+1);
+            backTrace(nums, result, tempList);
             tempList.remove(tempList.size()-1);
         }
     }
@@ -30,7 +30,7 @@ public class Problem46 {
         int[] nums = {1,2,3};
         List<List<Integer>> result = permute(nums);
         for (List tempList : result) {
-            System.out.println(tempList.get(1));
+            System.out.println(tempList.toString());
         }
     }
 }
