@@ -13,6 +13,7 @@ package Xi.LeetCode.FiftyToHundred;
  */
 public class Problem55 {
 
+    //动态规划，时间复杂度O(n²)
     public boolean canJump(int[] nums) {
 
         if (nums.length <= 1) {
@@ -38,6 +39,7 @@ public class Problem55 {
         return boo[0];
     }
 
+    //回溯法，时间复杂度O(2ⁿ)
     public static boolean recursive(int[] nums, int index) {
         if (nums[index] + index >= nums.length - 1)
             return true;
