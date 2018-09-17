@@ -33,7 +33,7 @@ public class Problem77 {
         }
 
         /**
-         * 主意这里用n -(k - tempList.size()) + 1代替n可以节省大量不必要的时间
+         * 注意这里用n -(k - tempList.size()) + 1代替n可以节省大量不必要的时间
          */
         for (int i = begin; i <= n -(k - tempList.size()) + 1; i++) {
             tempList.add(i);
