@@ -33,6 +33,9 @@ public class Problem95 {
         return genTrees(1, n);
     }
 
+    /**
+     * 递归算法
+     */
     public List<TreeNode> genTrees(int start, int end) {
         List<TreeNode> list = new ArrayList<>();
 
