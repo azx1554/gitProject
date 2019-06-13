@@ -1,5 +1,7 @@
 package Xi.LeetCode.FiftyToHundred;
 
+import Xi.LeetCode.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,13 +66,4 @@ public class Problem95 {
         return list;
     }
 
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }

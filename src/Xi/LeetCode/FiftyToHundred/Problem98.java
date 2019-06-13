@@ -1,5 +1,7 @@
 package Xi.LeetCode.FiftyToHundred;
 
+import Xi.LeetCode.TreeNode;
+
 /**
  * Given a binary tree, determine if it is a valid binary search tree (BST).<br>
  * <p>
@@ -26,15 +28,5 @@ public class Problem98 {
 
         return isValidBST(root.left, minVal, root.val) && isValidBST(root.right, root.val, maxVal);
 
-    }
-
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 }
