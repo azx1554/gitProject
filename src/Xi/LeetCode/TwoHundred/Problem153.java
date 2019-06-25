@@ -17,6 +17,25 @@ package Xi.LeetCode.TwoHundred;
 public class Problem153 {
 
     public int findMin(int[] nums) {
-        return 0;
+        int n = nums.length;
+        if (nums == null || n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return nums[0];
+        }
+        if (nums[0] < nums[n-1]) {
+            return nums[0];
+        }
+        int left = 0, right = n - 1, mid;
+        while (left+1 != right) {
+            mid = left + right >>> 1;
+            if (nums[left] > nums[mid]) {
+                right = mid;
+            } else {
+                left = mid;
+            }
+        }
+        return nums[right];
     }
 }
