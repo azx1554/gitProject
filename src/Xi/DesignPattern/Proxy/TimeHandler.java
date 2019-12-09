@@ -24,6 +24,10 @@ public class TimeHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         long startTime = System.currentTimeMillis();
+        new Thread(()->{
+            String s = null;
+            System.out.println(s.length());
+        }).start();
         System.out.println("开始行驶...");
         method.invoke(moveable);
         long endTime = System.currentTimeMillis();
