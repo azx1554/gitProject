@@ -1,7 +1,6 @@
 package Xi.LeetCode.OneHundredFifty;
 
 public class Problem141 {
-
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false;
@@ -21,7 +20,6 @@ public class Problem141 {
         }
         return false;
     }
-
     class ListNode {
         int val;
         ListNode next;
